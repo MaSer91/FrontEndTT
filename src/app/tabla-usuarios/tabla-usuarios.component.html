@@ -1,0 +1,37 @@
+<div class="menu">
+  <div class="header">
+    <h3>Modulo de Administracion</h3>
+    <h2>Administracion de Usuarios</h2>
+  </div>
+
+  <div class="table-container">
+    <table class="user-table">
+      <tr>
+        <th>Usuario</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Departamento</th>
+        <th>Cargo</th>
+        <th>Email</th>
+        <!-- Agrega más encabezados según tu modelo -->
+        <th>Acciones</th>
+      </tr>
+      <tr *ngFor="let registro of registros">
+        <td>{{ registro.usuario }}</td>
+        <td>{{ registro.primerNombre + registro.segundoNombre }}</td>
+        <td>{{ registro.primerApellido + registro.segundoApellido }}</td>
+        <td>{{ registro.idDepartamento }}</td>
+        <td>{{ registro.idCargo }}</td>
+        <td>test@gmail.com</td>
+        <!-- Agrega más celdas según tu modelo -->
+        <td>
+          <button (click)="editarRegistro(registro)">Editar</button>
+          <button>Eliminar</button>
+          
+          <!--<button (click)="eliminarRegistro(registro.id)">Eliminar</button>-->
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
